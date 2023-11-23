@@ -1,10 +1,33 @@
 <html>
     <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="css/note.css">
         <script src="js/note.js"></script>
     </head>
     <body>
         <textarea class="Title" type="text" placeholder="Title" oninput="adjustTextareaHeight(this)" rows=1>Title</textarea>
         <textarea class="Text" oninput="adjustTextareaHeight(this)" rows=1>Text</textarea>
+        <div class="ToDo" data-Checked="true" data-Value="Text"></div>
     </body>
+    <script>
+    var todoElements = document.querySelectorAll('.ToDo');
+
+    todoElements.forEach(function(todo) {
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.className = 'ToDoCheckbox';
+        checkbox.checked = todo.getAttribute('data-Checked') === 'true';
+
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'ToDoInput';
+        if(todo.getAttribute('data-Checked') === 'true'){
+            input.className += ' ToDoInputChecked';
+        }
+        input.value = todo.getAttribute('data-Value');
+
+        todo.appendChild(checkbox);
+        todo.appendChild(input);
+    });
+    </script>
 </html>
