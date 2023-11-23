@@ -1,9 +1,11 @@
 :root{
     --text-disabled: #9E9E9E;
+    --text-color: black;
 }
 
 *{
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
 }
 
 textarea.Title{
@@ -63,4 +65,14 @@ textarea.Header-3{
     width: 80%;
     border: 0;
     margin-bottom: 10px;
+}
+
+.Quote{
+    resize: none;
+    height: 20px;
+    width: 80%;
+    border: 0;
+    border-left: 3px solid var(--text-color);
+    padding-left: 10px;
+    font-style: italic;
 }
