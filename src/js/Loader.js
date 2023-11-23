@@ -5,6 +5,7 @@ $(function() {
     LoadHeader_1()
     LoadHeader_2()
     LoadHeader_3()
+    LoadQuote()
 });
 
 function LoadTitle() {
@@ -108,5 +109,22 @@ function LoadHeader_3() {
         };
 
         header3.appendChild(Header3TextArea);
+    });
+}
+
+function LoadQuote() {
+    var QuoteElements = document.querySelectorAll('.Quote');
+
+    QuoteElements.forEach(function(Quote) {
+        var QuoteTextArea = document.createElement('textarea');
+        QuoteTextArea.value = Quote.getAttribute('data-text');
+        QuoteTextArea.className = 'Quote';
+        QuoteTextArea.rows = 1;
+        QuoteTextArea.placeholder = 'Quote';
+        QuoteTextArea.oninput = function() {
+            adjustTextareaHeight(this)
+        };
+
+        Quote.appendChild(QuoteTextArea);
     });
 }
