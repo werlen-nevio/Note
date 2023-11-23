@@ -1,12 +1,12 @@
 $(function() {
     LoadTitle()
+    LoadText()
     LoadToDo()
 });
 
 function LoadTitle() {
     var TitleElement = document.querySelector('.Title');
 
-    // Title
     var TitleTextArea = document.createElement('textarea');
     TitleTextArea.value = TitleElement.getAttribute('data-text');
     TitleTextArea.className = 'Title';
@@ -19,10 +19,25 @@ function LoadTitle() {
     TitleElement.appendChild(TitleTextArea);
 }
 
+function LoadText() {
+    var TextElements = document.querySelectorAll('.Text');
+
+    TextElements.forEach(function(text) {
+        var TextTextArea = document.createElement('textarea');
+        TextTextArea.value = text.getAttribute('data-text');
+        TextTextArea.className = 'Text';
+        TextTextArea.rows = 1;
+        TextTextArea.oninput = function() {
+            adjustTextareaHeight(this)
+        };
+
+        text.appendChild(TextTextArea);
+    });
+}
+
 function LoadToDo() {
     var todoElements = document.querySelectorAll('.ToDo');
 
-    //ToDo
     todoElements.forEach(function(todo) {
         var toDoCheckbox = document.createElement('input');
         toDoCheckbox.type = 'checkbox';
