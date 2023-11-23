@@ -76,3 +76,8 @@ textarea.Header-3{
     padding-left: 10px;
     font-style: italic;
 }
+
+.Divider{
+    margin: 10px;
+    border-bottom: 1px solid #9E9E9E;
+}
