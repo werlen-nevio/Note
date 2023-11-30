@@ -3,6 +3,7 @@ const currentLanguage = urlParams.get('lang') || 'de';
 
 const languages = {
     en: {
+        title: "Title",
         text: "Text",
         todoList: "To-Do-List",
         header1: "Header 1",
@@ -11,6 +12,7 @@ const languages = {
         quote: "Quote"
     },
     de: {
+        title: "Titel",
         text: "Text",
         todoList: "To-Do-Liste",
         header1: "Überschrift 1",

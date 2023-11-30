@@ -15,7 +15,7 @@ function LoadTitle() {
     TitleTextArea.value = TitleElement.getAttribute('data-text');
     TitleTextArea.className = 'Title';
     TitleTextArea.rows = 1;
-    TitleTextArea.placeholder = 'Title';
+    TitleTextArea.placeholder = languages[currentLanguage].title;
     TitleTextArea.oninput = function() {
         adjustTextareaHeight(this)
     };
@@ -73,7 +73,7 @@ function LoadHeader_1() {
         Header1TextArea.value = header1.getAttribute('data-text');
         Header1TextArea.className = 'Header-1';
         Header1TextArea.rows = 1;
-        Header1TextArea.placeholder = 'Header';
+        Header1TextArea.placeholder = languages[currentLanguage].header1;
         Header1TextArea.oninput = function() {
             adjustTextareaHeight(this)
         };
@@ -92,7 +92,7 @@ function LoadHeader_2() {
         Header2TextArea.value = header2.getAttribute('data-text');
         Header2TextArea.className = 'Header-2';
         Header2TextArea.rows = 1;
-        Header2TextArea.placeholder = 'Header';
+        Header2TextArea.placeholder = languages[currentLanguage].header2;
         Header2TextArea.oninput = function() {
             adjustTextareaHeight(this)
         };
@@ -111,7 +111,7 @@ function LoadHeader_3() {
         Header3TextArea.value = header3.getAttribute('data-text');
         Header3TextArea.className = 'Header-3';
         Header3TextArea.rows = 1;
-        Header3TextArea.placeholder = 'Header';
+        Header3TextArea.placeholder = languages[currentLanguage].header3;
         Header3TextArea.oninput = function() {
             adjustTextareaHeight(this)
         };
@@ -130,7 +130,7 @@ function LoadQuote() {
         QuoteTextArea.value = Quote.getAttribute('data-text');
         QuoteTextArea.className = 'Quote';
         QuoteTextArea.rows = 1;
-        QuoteTextArea.placeholder = 'Quote';
+        QuoteTextArea.placeholder = languages[currentLanguage].quote;
         QuoteTextArea.oninput = function() {
             adjustTextareaHeight(this)
         };
