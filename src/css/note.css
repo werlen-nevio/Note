@@ -104,9 +104,14 @@ div.Header-2{
     flex-direction: column;
 }
 
-/* Griff-Stil */
-.handle {
+.handle.fa-bars {
     cursor: grab;
+    display: inline-block;
+    padding-right: 5px;
+    color: var(--text-disabled);
+}
+
+.handleAdd {
     display: inline-block;
     padding-right: 5px;
     color: var(--text-disabled);
