@@ -149,8 +149,37 @@ function createHandle() {
 }
 
 function handleAdd() {
-    var handleAdd = document.createElement('i');
-    handleAdd.className = 'fas fa-plus handleAdd';
+    var handleAdd = document.createElement('div');
+    handleAdd.className = 'container';
+
+    var handleAddIcon = document.createElement('i');
+    handleAddIcon.className = 'fas fa-plus handleAdd';
+    
+    handleAdd.appendChild(handleAddIcon);
+    handleAdd.appendChild(getDropdown());
 
     return handleAdd;
+}
+
+function getDropdown() {
+    var dropdown = document.createElement('div');
+    dropdown.className = 'dropdown-content';
+
+    var dropdownItem1 = document.createElement('a');
+    dropdownItem1.href = '#';
+    dropdownItem1.innerText = 'Objekt 1';
+
+    var dropdownItem2 = document.createElement('a');
+    dropdownItem2.href = '#';
+    dropdownItem2.innerText = 'Objekt 2';
+
+    var dropdownItem3 = document.createElement('a');
+    dropdownItem3.href = '#';
+    dropdownItem3.innerText = 'Objekt 3';
+
+    dropdown.appendChild(dropdownItem1);
+    dropdown.appendChild(dropdownItem2);
+    dropdown.appendChild(dropdownItem3);
+
+    return dropdown;
 }
