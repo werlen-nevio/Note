@@ -18,3 +18,34 @@ function openDropdown(event) {
         dropdownContent.style.display = 'block';
     }
 }
+
+function addElement(element, button) {
+    var currentElement = button.parentElement.parentElement.parentElement;
+
+    var newElement = document.createElement("div");
+    newElement.className = "new " + element;
+
+    // Das neue Element als Kind dem aktuellen Element hinzufügen
+    currentElement.parentNode.insertBefore(newElement, currentElement.nextSibling);
+
+    switch (element) {
+        case "ToDo":
+            LoadNewToDo()
+            break;
+        case "Header-1":
+            LoadNewHeader_1()
+            break;
+        case "Header-2":
+            LoadNewHeader_2()
+            break;
+        case "Header-3":
+            LoadNewHeader_3()
+            break;
+        case "Quote":
+            LoadNewQuote()
+            break;
+        default: // Text
+            LoadNewText()
+            break;
+    }
+}
