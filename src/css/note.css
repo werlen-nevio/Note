@@ -77,7 +77,37 @@ textarea.Quote{
     font-style: italic;
 }
 
-.Divider{
-    margin: 10px;
-    border-bottom: 1px solid #9E9E9E;
+div.Text, div.ToDo, div.Quote, div.Header-1, div.Header-2, div.Header-3{
+    display: flex;
+}
+
+div.ToDo{
+    .handle{
+        padding-top: 3px;
+    }
+}
+
+div.Header-1{
+    .handle{
+        padding-top: 8px;
+    }
+}
+
+div.Header-2{
+    .handle{
+        padding-top: 5px;
+    }
+}
+
+.sortable-divs {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Griff-Stil */
+.handle {
+    cursor: grab;
+    display: inline-block;
+    padding-right: 5px;
+    color: var(--text-disabled);
 }

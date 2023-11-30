@@ -1,11 +1,15 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <link rel="stylesheet" href="css/note.css">
-        <script src="js/note.js"></script>
-    </head>
-    <body>
-        <div class="Title" data-text="Title"></div>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/note.css">
+    <script src="js/note.js"></script>
+</head>
+<body>
+    <div class="Title" data-text="Title"></div>
+    <div class="sortable-divs">
         <div class="Text" data-text="Text"></div>
         <div class="ToDo" data-Checked="true" data-Value="Text"></div>
         <div class="Header-1" data-text="Header 1"></div>
@@ -14,8 +18,20 @@
         <!--TODO: Table-->
         <!--TODO: List 1-3-->
         <div class="Quote" data-text="Quote"></div>
-        <div class="Divider"></div>
         <!--TODO: Link to Page-->
-    </body>
+    </div>
+
     <script src="js/Loader.js"></script>
+    <script>
+        // jQuery verwenden, um SortableJS zu initialisieren
+        $(document).ready(function(){
+            // SortableJS initialisieren
+            new Sortable(document.querySelector('.sortable-divs'), {
+                animation: 150, // Animationsdauer beim Verschieben
+                ghostClass: 'sortable-ghost', // CSS-Klasse für das "Geister"-Element
+                handle: '.fa-bars' // Griff-Klasse
+            });
+        });
+    </script>
+</body>
 </html>

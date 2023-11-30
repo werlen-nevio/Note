@@ -35,6 +35,7 @@ function LoadText() {
             adjustTextareaHeight(this)
         };
 
+        text.appendChild(createHandle());
         text.appendChild(TextTextArea);
     });
 }
@@ -56,6 +57,7 @@ function LoadToDo() {
         }
         toDoInput.value = todo.getAttribute('data-Value');
     
+        todo.appendChild(createHandle());
         todo.appendChild(toDoCheckbox);
         todo.appendChild(toDoInput);
     });
@@ -74,6 +76,7 @@ function LoadHeader_1() {
             adjustTextareaHeight(this)
         };
 
+        header1.appendChild(createHandle());
         header1.appendChild(Header1TextArea);
     });
 }
@@ -91,6 +94,7 @@ function LoadHeader_2() {
             adjustTextareaHeight(this)
         };
 
+        header2.appendChild(createHandle());
         header2.appendChild(Header2TextArea);
     });
 }
@@ -108,6 +112,7 @@ function LoadHeader_3() {
             adjustTextareaHeight(this)
         };
 
+        header3.appendChild(createHandle());
         header3.appendChild(Header3TextArea);
     });
 }
@@ -125,6 +130,14 @@ function LoadQuote() {
             adjustTextareaHeight(this)
         };
 
+        Quote.appendChild(createHandle());
         Quote.appendChild(QuoteTextArea);
     });
+}
+
+function createHandle() {
+    var handle = document.createElement('i');
+    handle.className = 'fas fa-bars handle';
+
+    return handle;
 }
