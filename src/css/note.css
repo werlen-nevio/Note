@@ -82,19 +82,19 @@ div.Text, div.ToDo, div.Quote, div.Header-1, div.Header-2, div.Header-3{
 }
 
 div.ToDo{
-    .handle{
+    .handle, .handleAdd{
         padding-top: 3px;
     }
 }
 
 div.Header-1{
-    .handle{
+    .handle, .handleAdd{
         padding-top: 8px;
     }
 }
 
 div.Header-2{
-    .handle{
+    .handle, .handleAdd{
         padding-top: 5px;
     }
 }
