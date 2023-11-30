@@ -165,21 +165,27 @@ function getDropdown() {
     var dropdown = document.createElement('div');
     dropdown.className = 'dropdown-content';
 
-    var dropdownItem1 = document.createElement('a');
-    dropdownItem1.href = '#';
-    dropdownItem1.innerText = 'Objekt 1';
-
-    var dropdownItem2 = document.createElement('a');
-    dropdownItem2.href = '#';
-    dropdownItem2.innerText = 'Objekt 2';
-
-    var dropdownItem3 = document.createElement('a');
-    dropdownItem3.href = '#';
-    dropdownItem3.innerText = 'Objekt 3';
-
-    dropdown.appendChild(dropdownItem1);
-    dropdown.appendChild(dropdownItem2);
-    dropdown.appendChild(dropdownItem3);
+    dropdown.appendChild(generateDropdownOption(languages[currentLanguage].text, "fa-font"));
+    dropdown.appendChild(generateDropdownOption(languages[currentLanguage].todoList, "fa-check"));
+    dropdown.appendChild(generateDropdownOption(languages[currentLanguage].header1, "fa-heading"));
+    dropdown.appendChild(generateDropdownOption(languages[currentLanguage].header2, "fa-heading"));
+    dropdown.appendChild(generateDropdownOption(languages[currentLanguage].header3, "fa-heading"));
+    dropdown.appendChild(generateDropdownOption(languages[currentLanguage].quote, "fa-quote-right"));
 
     return dropdown;
+}
+
+function generateDropdownOption(text, iconClass) {
+    var dropdownItem = document.createElement('button');
+
+    var dropdownItemIcon = document.createElement('i');
+    dropdownItemIcon.className = "dropdownIcon fas " + iconClass;
+
+    var dropdownText = document.createElement('span');
+    dropdownText.className = "dropdownText";
+    dropdownText.innerText = " " + text;
+
+    dropdownItem.appendChild(dropdownItemIcon);
+    dropdownItem.appendChild(dropdownText);
+    return dropdownItem;
 }
