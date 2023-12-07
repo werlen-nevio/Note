@@ -6,6 +6,7 @@ $(function() {
     LoadHeader_2()
     LoadHeader_3()
     LoadQuote()
+    LoadRightClickMenu()
 });
 
 function LoadTitle() {
@@ -191,4 +192,11 @@ function generateDropdownOption(text, iconClass, element) {
     dropdownItem.appendChild(dropdownItemIcon);
     dropdownItem.appendChild(dropdownText);
     return dropdownItem;
+}
+
+function LoadRightClickMenu() {
+    var Menu = document.querySelector('#context-menu');
+    var DeleteItem = generatedeleteElement()
+
+    Menu.appendChild(DeleteItem);
 }

@@ -2,7 +2,7 @@ function LoadNewText() {
     var TextElements = document.querySelectorAll('.Text.new');
     
     TextElements.forEach(function(text) {
-        text.className = 'Text';
+        text.className = 'Text element';
 
         var TextTextArea = document.createElement('textarea');
         TextTextArea.value = text.getAttribute('data-text');
@@ -22,7 +22,7 @@ function LoadNewToDo() {
     var todoElements = document.querySelectorAll('.ToDo.new');
     
     todoElements.forEach(function(todo) {
-        todo.className = 'ToDo';
+        todo.className = 'ToDo element';
 
         var toDoCheckbox = document.createElement('input');
         toDoCheckbox.type = 'checkbox';
@@ -48,7 +48,7 @@ function LoadNewHeader_1() {
     var Header1Elements = document.querySelectorAll('.Header-1.new');
     
     Header1Elements.forEach(function(header1) {
-        header1.className = 'Header-1';
+        header1.className = 'Header-1 element';
 
         var Header1TextArea = document.createElement('textarea');
         Header1TextArea.value = header1.getAttribute('data-text');
@@ -69,7 +69,7 @@ function LoadNewHeader_2() {
     var Header2Elements = document.querySelectorAll('.Header-2.new');
     
     Header2Elements.forEach(function(header2) {
-        header2.className = 'Header-2';
+        header2.className = 'Header-2 element';
 
         var Header2TextArea = document.createElement('textarea');
         Header2TextArea.value = header2.getAttribute('data-text');
@@ -90,7 +90,7 @@ function LoadNewHeader_3() {
     var Header3Elements = document.querySelectorAll('.Header-3.new');
     
     Header3Elements.forEach(function(header3) {
-        header3.className = 'Header-3';
+        header3.className = 'Header-3 element';
         
         var Header3TextArea = document.createElement('textarea');
         Header3TextArea.value = header3.getAttribute('data-text');
@@ -111,7 +111,7 @@ function LoadNewQuote() {
     var QuoteElements = document.querySelectorAll('.Quote.new');
     
     QuoteElements.forEach(function(Quote) {
-        Quote.className = 'Quote';
+        Quote.className = 'Quote element';
 
         var QuoteTextArea = document.createElement('textarea');
         QuoteTextArea.value = Quote.getAttribute('data-text');

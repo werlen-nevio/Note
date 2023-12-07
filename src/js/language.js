@@ -9,7 +9,8 @@ const languages = {
         header1: "Header 1",
         header2: "Header 2",
         header3: "Header 3",
-        quote: "Quote"
+        quote: "Quote",
+        delete: "Delete"
     },
     de: {
         title: "Titel",
@@ -18,6 +19,7 @@ const languages = {
         header1: "Überschrift 1",
         header2: "Überschrift 2",
         header3: "Überschrift 3",
-        quote: "Zitat"
+        quote: "Zitat",
+        delete: "Löschen"
     }
 };
