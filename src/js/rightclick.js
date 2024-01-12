@@ -2,6 +2,7 @@ let events = ["contextmenu", "touchstart"];
 var timeout;
 var lastTap = 0;
 let contextMenu = document.getElementById("context-menu");
+let DeleteItem = document.getElementById("DeleteItem");
 
 events.forEach((eventType) => {
   document.addEventListener(
@@ -39,6 +40,7 @@ events.forEach((eventType) => {
         }
 
         contextMenu.style.visibility = "visible";
+        console.log( DeleteItem );
       }
     },
     { passive: false }
